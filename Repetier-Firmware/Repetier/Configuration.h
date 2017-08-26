@@ -36,7 +36,7 @@
 
 */
 
-#define NUM_EXTRUDER 2
+#define NUM_EXTRUDER 4
 #define MOTHERBOARD 33
 #include "pins.h"
 
