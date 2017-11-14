@@ -315,8 +315,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISABLE_Z 0
 #define DISABLE_E 0
 #define INVERT_X_DIR 0
-#define INVERT_Y_DIR 1
-#define INVERT_Z_DIR 1
+#define INVERT_Y_DIR 0
+#define INVERT_Z_DIR 0
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR 1
@@ -604,9 +604,9 @@ Values must be in range 1..255
     "xInvert": 0,
     "xInvertEnable": 0,
     "eepromMode": 2,
-    "yInvert": "1",
+    "yInvert": "0",
     "yInvertEnable": 0,
-    "zInvert": "1",
+    "zInvert": "0",
     "zInvertEnable": 0,
     "extruder": [
         {
