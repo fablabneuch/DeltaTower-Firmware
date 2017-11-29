@@ -36,7 +36,7 @@
 
 */
 
-#define NUM_EXTRUDER 2
+#define NUM_EXTRUDER 1
 #define MOTHERBOARD 33
 #include "pins.h"
 
@@ -116,46 +116,6 @@
 #define EXT0_DECOUPLE_TEST_PERIOD 12000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
-#define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 1040
-#define EXT1_Z_OFFSET 0
-#define EXT1_STEPS_PER_MM 319.8
-#define EXT1_TEMPSENSOR_TYPE 1
-#define EXT1_TEMPSENSOR_PIN TEMP_2_PIN
-#define EXT1_HEATER_PIN HEATER_2_PIN
-#define EXT1_STEP_PIN ORIG_E1_STEP_PIN
-#define EXT1_DIR_PIN ORIG_E1_DIR_PIN
-#define EXT1_INVERSE 1
-#define EXT1_ENABLE_PIN ORIG_E1_ENABLE_PIN
-#define EXT1_ENABLE_ON 0
-#define EXT1_MIRROR_STEPPER 0
-#define EXT1_STEP2_PIN ORIG_E1_STEP_PIN
-#define EXT1_DIR2_PIN ORIG_E1_DIR_PIN
-#define EXT1_INVERSE2 0
-#define EXT1_ENABLE2_PIN ORIG_E1_ENABLE_PIN
-#define EXT1_MAX_FEEDRATE 200
-#define EXT1_MAX_START_FEEDRATE 40
-#define EXT1_MAX_ACCELERATION 4000
-#define EXT1_HEAT_MANAGER 1
-#define EXT1_WATCHPERIOD 1
-#define EXT1_PID_INTEGRAL_DRIVE_MAX 230
-#define EXT1_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT1_PID_PGAIN_OR_DEAD_TIME 7
-#define EXT1_PID_I 2
-#define EXT1_PID_D 40
-#define EXT1_PID_MAX 255
-#define EXT1_ADVANCE_K 0
-#define EXT1_ADVANCE_L 0
-#define EXT1_ADVANCE_BACKLASH_STEPS 0
-#define EXT1_WAIT_RETRACT_TEMP 150
-#define EXT1_WAIT_RETRACT_UNITS 0
-#define EXT1_SELECT_COMMANDS ""
-#define EXT1_DESELECT_COMMANDS ""
-#define EXT1_EXTRUDER_COOLER_PIN -1
-#define EXT1_EXTRUDER_COOLER_SPEED 255
-#define EXT1_DECOUPLE_TEST_PERIOD 12000
-#define EXT1_JAM_PIN -1
-#define EXT1_JAM_PULLUP 0
 
 #define FEATURE_RETRACTION 1
 #define AUTORETRACT_ENABLED 0
@@ -197,7 +157,7 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 1
+#define HAVE_HEATED_BED 0
 #define HEATED_BED_MAX_TEMP 80
 #define SKIP_M190_IF_WITHIN 5
 #define HEATED_BED_SENSOR_TYPE 1
@@ -662,59 +622,6 @@ Values must be in range 1..255
                 "enable": "ORIG_E0_ENABLE_PIN"
             },
             "inverse": 0
-        },
-        {
-            "id": 1,
-            "heatManager": 1,
-            "pidDriveMin": 40,
-            "pidDriveMax": 230,
-            "pidMax": 255,
-            "sensorType": 1,
-            "sensorPin": "TEMP_2_PIN",
-            "heaterPin": "HEATER_2_PIN",
-            "maxFeedrate": 200,
-            "startFeedrate": 40,
-            "invert": "1",
-            "invertEnable": "0",
-            "acceleration": 4000,
-            "watchPeriod": 1,
-            "pidP": 7,
-            "pidI": 2,
-            "pidD": 40,
-            "advanceK": 0,
-            "advanceL": 0,
-            "waitRetractTemp": 150,
-            "waitRetractUnits": 0,
-            "waitRetract": 0,
-            "stepsPerMM": 319.8,
-            "coolerPin": -1,
-            "coolerSpeed": 255,
-            "selectCommands": "",
-            "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 13,
-            "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 1040,
-            "zOffsetSteps": 0,
-            "stepper": {
-                "name": "Extruder 1",
-                "step": "ORIG_E1_STEP_PIN",
-                "dir": "ORIG_E1_DIR_PIN",
-                "enable": "ORIG_E1_ENABLE_PIN"
-            },
-            "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 12,
-            "jamPin": -1,
-            "jamPullup": "0",
-            "mirror": "0",
-            "invert2": "0",
-            "stepper2": {
-                "name": "Extruder 1",
-                "step": "ORIG_E1_STEP_PIN",
-                "dir": "ORIG_E1_DIR_PIN",
-                "enable": "ORIG_E1_ENABLE_PIN"
-            }
         }
     ],
     "uiLanguage": 0,
@@ -852,7 +759,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "1",
-    "hasHeatedBed": "1",
+    "hasHeatedBed": "0",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
@@ -1195,7 +1102,7 @@ Values must be in range 1..255
     "hasUser0": false,
     "hasUser1": false,
     "hasUser2": false,
-    "numExtruder": 2,
+    "numExtruder": 1,
     "version": 92.9,
     "primaryPortName": ""
 }
