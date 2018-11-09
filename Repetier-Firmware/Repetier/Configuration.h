@@ -85,7 +85,7 @@
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
 #define EXT0_DIR_PIN ORIG_E0_DIR_PIN
-#define EXT0_INVERSE 1
+#define EXT0_INVERSE 0
 #define EXT0_ENABLE_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_ENABLE_ON 0
 #define EXT0_MIRROR_STEPPER 0
@@ -157,8 +157,8 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 0
-#define HEATED_BED_MAX_TEMP 80
+#define HAVE_HEATED_BED 1
+#define HEATED_BED_MAX_TEMP 100
 #define SKIP_M190_IF_WITHIN 5
 #define HEATED_BED_SENSOR_TYPE 1
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
@@ -282,7 +282,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 330
 #define Y_MAX_LENGTH 330
-#define Z_MAX_LENGTH 400
+#define Z_MAX_LENGTH 500
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -397,14 +397,14 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // ################# Misc. settings ##################
 
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 #define ENABLE_POWER_ON_STARTUP 1
 #define POWER_INVERTING 0
 #define KILL_METHOD 1
 #define ACK_WITH_LINENUMBER 1
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 2
+#define EEPROM_MODE 1
 #undef PS_ON_PIN
 #define PS_ON_PIN -1
 #define JSON_OUTPUT 0
@@ -493,14 +493,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CONTROLLER 2
 #define ADC_KEYPAD_PIN -1
 #define LANGUAGE_EN_ACTIVE 1
-#define LANGUAGE_DE_ACTIVE 1
+#define LANGUAGE_DE_ACTIVE 0
 #define LANGUAGE_NL_ACTIVE 0
 #define LANGUAGE_PT_ACTIVE 0
 #define LANGUAGE_IT_ACTIVE 0
 #define LANGUAGE_ES_ACTIVE 0
 #define LANGUAGE_FI_ACTIVE 0
 #define LANGUAGE_SE_ACTIVE 0
-#define LANGUAGE_FR_ACTIVE 1
+#define LANGUAGE_FR_ACTIVE 0
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
@@ -531,12 +531,12 @@ Values must be in range 1..255
 */
 #define BEEPER_SHORT_SEQUENCE 2,2
 #define BEEPER_LONG_SEQUENCE 8,8
-#define UI_SET_PRESET_HEATED_BED_TEMP_PLA 30
-#define UI_SET_PRESET_EXTRUDER_TEMP_PLA   180
-#define UI_SET_PRESET_HEATED_BED_TEMP_ABS 55
-#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   210
+#define UI_SET_PRESET_HEATED_BED_TEMP_PLA 50
+#define UI_SET_PRESET_EXTRUDER_TEMP_PLA   200
+#define UI_SET_PRESET_HEATED_BED_TEMP_ABS 70
+#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   240
 #define UI_SET_MIN_HEATED_BED_TEMP  15
-#define UI_SET_MAX_HEATED_BED_TEMP 80
+#define UI_SET_MAX_HEATED_BED_TEMP 100
 #define UI_SET_MIN_EXTRUDER_TEMP   130
 #define UI_SET_MAX_EXTRUDER_TEMP   295
 #define UI_SET_EXTRUDER_FEEDRATE 2
@@ -555,7 +555,7 @@ Values must be in range 1..255
 {
     "editMode": 2,
     "processor": 0,
-    "baudrate": 115200,
+    "baudrate": 250000,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 80,
@@ -563,7 +563,7 @@ Values must be in range 1..255
     "zStepsPerMM": 80,
     "xInvert": 0,
     "xInvertEnable": 0,
-    "eepromMode": 2,
+    "eepromMode": 1,
     "yInvert": "0",
     "yInvertEnable": 0,
     "zInvert": "0",
@@ -580,7 +580,7 @@ Values must be in range 1..255
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 200,
             "startFeedrate": 40,
-            "invert": "1",
+            "invert": "0",
             "invertEnable": "0",
             "acceleration": 4000,
             "watchPeriod": 1,
@@ -675,7 +675,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 330,
     "yLength": 330,
-    "zLength": 400,
+    "zLength": 500,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -759,7 +759,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "1",
-    "hasHeatedBed": "0",
+    "hasHeatedBed": "1",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
@@ -778,18 +778,18 @@ Values must be in range 1..255
     "uiKeyReduceRepeat": 50,
     "uiKeyMinRepeat": 50,
     "featureBeeper": "1",
-    "uiPresetBedTempPLA": 30,
-    "uiPresetBedABS": 55,
-    "uiPresetExtruderPLA": 180,
-    "uiPresetExtruderABS": 210,
+    "uiPresetBedTempPLA": 50,
+    "uiPresetBedABS": 70,
+    "uiPresetExtruderPLA": 200,
+    "uiPresetExtruderABS": 240,
     "uiMinHeatedBed": 15,
-    "uiMaxHeatedBed": 80,
+    "uiMaxHeatedBed": 100,
     "uiMinEtxruderTemp": 130,
     "uiMaxExtruderTemp": 295,
     "uiExtruderFeedrate": 2,
     "uiExtruderRetractDistance": 7,
     "uiSpeeddependentPositioning": "0",
-    "maxBedTemperature": 80,
+    "maxBedTemperature": 100,
     "bedSensorType": 1,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": "HEATER_1_PIN",
@@ -1046,14 +1046,14 @@ Values must be in range 1..255
     "zProbeZOffset": 0,
     "uiBedCoating": "1",
     "langEN": "1",
-    "langDE": "1",
+    "langDE": "0",
     "langNL": "0",
     "langPT": "0",
     "langIT": "0",
     "langES": "0",
     "langFI": "0",
     "langSE": "0",
-    "langFR": "1",
+    "langFR": "0",
     "langCZ": "0",
     "langPL": "0",
     "langTR": "0",
